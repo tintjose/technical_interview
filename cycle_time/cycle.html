@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>cycle time</title>
+<link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jqueryui-editable/css/jqueryui-editable.css" rel="stylesheet"/>
+<script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jqueryui-editable/js/jqueryui-editable.min.js"></script>
+ <script >
+ $("#myTable td").each(function(){
+	    var thisRowNum = $(this).closest('tr').prevAll().length;
+
+	    var thisColNum = $(this).prevAll().length;
+
+	    var cell = $(this).find('tr:eq('+thisRowNum+') td:eq('+thisColNum+')'); // the cell
+
+	    var thisCell = $(this).html();
+	    if (thisCell !== "") {
+	        if ((thisCell === cell.html())) {
+	           
+	        }
+	    }
+
+	 });
+                    </script>
+</head>
+<body>
+<table id="myTable"  border="1">
+<form>
+
+		<tr >
+			<th style="width:120px">  </th>
+			<th style="width:120px"> A </th>
+			<th style="width:120px"> B </th>	
+			<th style="width:120px"> C</th>
+			<th style="width:120px" > D </th>
+			<th style="width:120px"> E </th>
+			
+		</tr>
+		<tr>
+			<td >1</td>
+			<td  contenteditable='true'> 	</td>
+			<td  contenteditable='true'></td>
+			<td  contenteditable='true'></td>
+			<td  contenteditable='true'></td>
+			<td  contenteditable='true'> </td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td  contenteditable='true'> 	</td>
+			<td  contenteditable='true'>	</td>
+			<td  contenteditable='true'></td>
+			<td  contenteditable='true'> </td>
+			<td  contenteditable='true'> </td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td contenteditable='true'> 	</td>
+			<td contenteditable='true'></td>
+			<td contenteditable='true'></td>
+			<td contenteditable='true'> </td>
+			<td contenteditable='true'> </td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td contenteditable='true'> 	</td>
+			<td contenteditable='true'>	</td>
+			<td contenteditable='true'></td>
+			<td contenteditable='true'> </td>
+			<td contenteditable='true'> </td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td contenteditable='true'> 	</td>
+			<td contenteditable='true'>	</td>
+			<td contenteditable='true'> </td>
+			<td contenteditable='true'> </td>
+			<td contenteditable='true'></td>
+		</tr>
+		</form>
+	</table>
+</body>
+</html>
